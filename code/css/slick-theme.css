@@ -79,7 +79,7 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: 10px;
 }
 [dir='rtl'] .slick-prev
 {
@@ -112,6 +112,9 @@
 {
     content: '←';
 }
+
+#arrow .slick-after:before{content:""}
+#arrow .slick-next:before{content:""}
 
 /* Dots */
 .slick-dotted.slick-slider
