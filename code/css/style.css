@@ -7,7 +7,7 @@ body {
   margin: 0px;
 }
 
-/* 前ページ共通ヘッダ */
+/* 全ページ共通ヘッダ */
 
 .page-header {
   display: flex;
@@ -148,7 +148,7 @@ img {
 }
 
 .feature-content {
-  width: 90%;
+  width: 85%;
   height: 500px;
   padding: 30px 30px;
   margin-right: auto; 
@@ -181,7 +181,7 @@ img {
 }
 
 iframe {
-  width:90%;
+  width: 85%;
   height: 500px;
   border: 1px solid #808080;
 }
@@ -241,7 +241,6 @@ iframe {
   margin-top: 10px;
   margin-right: 10px;
 }
-
 
 /* access.html アクセス */
 .access-route {
@@ -305,6 +304,10 @@ iframe {
   margin-bottom: 200px;
 }
 
+.neighbor-info:last-child {
+  margin-bottom: 100px;
+}
+
 .neighbor-info h2{
   margin: 0px;  
 }
@@ -351,6 +354,27 @@ iframe {
   top: 5rem;
   left: 40rem; 
 }
+
+/* company.html 会社情報*/
+.company-info {
+  color: #696969;
+  margin-left: 9rem;
+  margin-bottom: 100px;
+}
+
+.company-info:last-child {
+  margin-bottom: 50px;
+}
+
+.company-info h2{
+  margin: 0px;  
+}
+
+.company-info p {
+  margin-left: 2rem;
+  line-height: 10px;
+}
+
 
 /* 全ページ共通フッター */
 .page-footer {
