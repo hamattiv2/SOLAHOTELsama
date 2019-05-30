@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>お問合せ</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="css/slick.css"  rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header class="page-header">
+      <h3><a href="index.html">SOLA<br>HOTEL</a></h3>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="room.html">部屋</a></li>
+          <li><a href="access.html">アクセス</a></li>
+          <li><a href="fact.html">設備情報</a></li>
+          <li><a href="neighbor.html">近隣情報</a></li>
+          <li><a href="company.html">会社情報<a></li>
+          <li><a href="contact.html">お問合せ</a></li>
+          <li><a href="#top">予約</a></li>
+        </ul>
+      </nav>
+    </header>
+ 
+    <main class="main-content">
+      <h1>お問合せ</h1>
+      <form class="contact-info" name="contact-form" action="#">
+        <div>
+          <p>お名前<span>(必須)</span></p>
+          <input type="text" id="contact-name" name="name" placeholder=" 例）山田太郎" style="width:200px">
+          <label id="none-name" style="display: none; color: red;"> 【名前を入力して下さい】</label>
+        </div>
+
+        <div>
+          <p>フリガナ<span>(必須)</span></p>
+          <input type="text" id="contact-kananame" name="kananame" style="width:200px" placeholder=" 例) ヤマダタロウ">
+          <label id="notin-kana" style="display: none; color: red;"> 【フリガナを入力して下さい】</label>
+          <label id="none-kana" style="display: none; color: red;"> 【カタカナで入力して下さい】</label>
+        </div>
+
+        <div>
+          <p>郵便番号</p>
+          <input type="text" id="contact-postnumber" name="postnumber" placeholder=" 例) 123-4567">
+        </div>
+
+        <div>
+          <p>住所</p>
+          <input type="text" id="contact-address" name="address" placeholder=" 例) 東京都千代田区大手町1-1-1" style="width:500px">
+        </div>
+
+        <div>
+          <p>電話番号(携帯電話可)</p>
+          <input type="tel" id="contact-phone" name="phone" placeholder=" 例) 03-1234-5678">
+        </div>
+
+        <div>
+          <p>FAX</p>
+          <input type="text" id="contact-fax" name="fax" placeholder=" 例) 03-1234-5679">
+        </div>
+        
+        <div class="contact-email">
+          <p>メールアドレス<span>(必須)</span></p>
+          <input type="email" id="contact-mail" name="mail" placeholder=" 例) solahotel@example.com">
+          <input type="email" id="confir-mail" name="mail" placeholder=" もう一度入力してください" >
+          <label id="none-email" style="display: none; color: red;"> 【メールアドレスを入力して下さい】</label>
+          <label id="none-confir" style="display: none; color: red;"> 【確認用メールアドレスを入力して下さい】</label>
+          <label id="match-email" style="display: none; color: red;"> 【メールアドレスが一致しません】</label>
+        </div>
+
+        <div>
+          <p>ご連絡方法</p>
+          <input type="radio" id="contact-phone" name="お電話" value="お電話" checked>
+          <label for="contact-phone">お電話</label>
+          <input type="radio" id="contact-fax" name="FAX" value="FAX">
+          <label for="contact-fax">FAX</label>
+          <input type="radio" id="contact-mail" name="メール" value="メール">
+          <label for="contact-mail">メール</label>
+        </div>
+
+        <p>お問合せ項目<span>(必須)</span></p>  
+        <div class="selectbox select-item">
+          <select id="contact-item" name="item">
+            <option value="contact0">選択してください</option>
+            <option value="contact1">旅館について</option>
+            <option value="contact2">料理について</option>
+            <option value="contact2">その他</option>
+          </select>
+        </div>
+        <label id="none-item" style="display: none; color: red;"> 【お問合わせ項目を選択して下さい】</label>
+
+        <div>
+          <p>お問合せ内容<span>(必須)</span></p>
+          <textarea name="cont" id="contact-cont" cols="40" rows="10" placeholder="お問い合わせ内容を入力してください"></textarea>
+          <label id="none-contact" style="display: none; color: red;"> 【お問合わせ内容を入力して下さい】</label>
+          <label id="contact-length" style="display: none; color: red;"> 【5文字以上入力してください】</label>
+        </div>
+
+        <input id="contact-submit" type="submit" value="送信">
+
+      </form>
+    </main>
+
+    <footer class="page-footer">
+      <div class="footer-address">
+        <h3>SOLA HOTEL</h3>
+        <p>〒 130-0002　東京都墨田区業平５丁目５−６</p>
+        <p>&phone; 03-5809-7966</p>
+      </div>
+
+      <div class="footer-content">
+        <nav>
+          <ul class="footer-nav">
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="room.html">部屋</a></li>
+            <li><a href="access.html">アクセス</a></li>
+            <li><a href="company.html">会社情報<a></li>
+            <li><a href="contact.html">お問合せ</a></li>
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script type="text/javascript"  src="js/slick.min.js"></script>
+    <script type="text/javascript"  src="js/script.js"></script>
+  </body>
+</html>
+
+  
