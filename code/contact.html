@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>お問合せ</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/slick-theme.css" rel="stylesheet" type="text/css">
-    <link href="css/slick.css"  rel="stylesheet" type="text/css">
   </head>
   <body>
     <header class="page-header">
@@ -19,7 +18,6 @@
           <li><a href="neighbor.html">近隣情報</a></li>
           <li><a href="company.html">会社情報<a></li>
           <li><a href="contact.html">お問合せ</a></li>
-          <li><a href="#top">予約</a></li>
         </ul>
       </nav>
     </header>
@@ -35,7 +33,7 @@
 
         <div>
           <p>フリガナ<span>(必須)</span></p>
-          <input type="text" id="contact-kananame" name="kananame" style="width:200px" placeholder=" 例) ヤマダタロウ">
+          <input type="text" id="contact-kananame" name="kananame" placeholder=" 例) ヤマダタロウ" style="width:200px">
           <label id="notin-kana" style="display: none; color: red;"> 【フリガナを入力して下さい】</label>
           <label id="none-kana" style="display: none; color: red;"> 【カタカナで入力して下さい】</label>
         </div>
@@ -98,6 +96,7 @@
         </div>
 
         <input id="contact-submit" type="submit" value="送信">
+        <input id="contact-reset" type="reset" value="リセット">
 
       </form>
     </main>

@@ -1,14 +1,45 @@
 
+// スライドショー
+const slideshow = [
+  "./img/slide1.jpg",
+  "./img/slide2.jpg",
+  "./img/slide3.jpg",
+  "./img/slide4.jpg",
+  "./img/slide5.jpg"
+];
 
+let fade = 2;
+let slideNo = 0;
+let test = 0;
 
-$('.slider').slick({
-  autoplay: true,
-    autoplaySpeed: 5000,
-    dots:true,
-    fade: true,
-    prevArrow: '<button class="slide-arrow prev-arrow"></button>',
-    nextArrow: '<button class="slide-arrow next-arrow"></button>'
-  });
+function slider(){
+  if (fade === 0) {
+    document.getElementById('slide2').src = slideshow[slideNo];
+    document.getElementById('slide2').className = 'fadein';
+    document.getElementById('slide1').className = 'fadeout';
+  } else {
+    document.getElementById('slide1').src = slideshow[slideNo];
+    document.getElementById('slide1').className = 'fadein';
+    document.getElementById('slide2').className = 'fadeout';
+  }
+
+  if (fade === 0) {
+    fade = 1;
+  } else {
+    fade = 0;
+  }
+
+  if (slideNo < 4) {
+    slideNo++;
+  } else {
+    slideNo = 0;
+  }
+
+  test = setTimeout(slider,4000); 
+  console.log(slideNo);
+}
+
+slider()
 
 
 // フォームで指定の文字・数値が入力されているか判断する。
@@ -72,8 +103,10 @@ contactSubmit.addEventListener('click', function(){
 
   // お問合せ内容が正しく入力されているか確認する。
   if(!cont) {
+    flag = 1;
     document.getElementById('none-contact').style.display = "block";
   } else if(cont.length <= 5) {
+    flag = 1;
     document.getElementById('contact-length').style.display = "block";
   } else {
     document.getElementById('none-contact').style.display = "none";
