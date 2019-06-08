@@ -56,7 +56,7 @@ function slider(){
   test = setTimeout(slider,4000); 
 }
 
-
+slider()  
 
 
 // フォームで指定の文字・数値が入力されているか判断する。
@@ -136,4 +136,3 @@ contactSubmit.addEventListener('click', function(){
 // お問合せフォームのリセットボタンが押下されたら、入力必須部分の赤字もリセットする。
 
 
-slider()
