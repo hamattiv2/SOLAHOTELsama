@@ -1,4 +1,22 @@
 
+// レスポンシブデザイン ドロワーがタップされたらメニューを表示する
+const menuOpen = document.getElementById('resp-menu-open');
+const menuClose = document.getElementById('resp-menu-close');
+
+menuOpen.addEventListener('click', function(){
+  console.log('OK');
+  document.getElementById('resp-menu-close').classList.add('resp-menu-slide');
+  document.getElementById('resp-nav').classList.add('resp-menu-slide');
+})
+
+menuClose.addEventListener('click', function(){
+  console.log('OK');
+  document.getElementById('resp-menu-close').classList.remove('resp-menu-slide');
+  document.getElementById('resp-nav').classList.remove('resp-menu-slide');
+})
+
+
+
 // スライドショー
 const slideshow = [
   "./img/slide1.jpg",
@@ -36,10 +54,9 @@ function slider(){
   }
 
   test = setTimeout(slider,4000); 
-  console.log(slideNo);
 }
 
-slider()
+
 
 
 // フォームで指定の文字・数値が入力されているか判断する。
@@ -114,6 +131,9 @@ contactSubmit.addEventListener('click', function(){
     document.getElementById('contact-length').style.display = "none";
   }
 
-
-
 })
+
+// お問合せフォームのリセットボタンが押下されたら、入力必須部分の赤字もリセットする。
+
+
+slider()
