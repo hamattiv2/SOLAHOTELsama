@@ -20,6 +20,21 @@
           <li><a href="contact.html">お問合せ</a></li>
         </ul>
       </nav>
+      
+      <div id="resp-menu-open"><span></span></div>
+      <nav id="resp-nav">
+        <div id="resp-menu-close"><span></span></div>
+        <ul id="resp-menu">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="room.html">部屋</a></li>
+          <li><a href="access.html">アクセス</a></li>
+          <li><a href="fact.html">設備情報</a></li>
+          <li><a href="neighbor.html">近隣情報</a></li>
+          <li><a href="company.html">会社情報<a></li>
+          <li><a href="contact.html">お問合せ</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+        </ul>
+      </nav>
     </header>
  
     <main class="main-content">
@@ -67,13 +82,13 @@
           <label id="match-email" style="display: none; color: red;"> 【メールアドレスが一致しません】</label>
         </div>
 
-        <div>
+        <div class="contact-button">
           <p>ご連絡方法</p>
-          <input type="radio" id="contact-phone" name="お電話" value="お電話" checked>
+          <input type="radio" id="contact-phone" name="contact" value="お電話" checked>
           <label for="contact-phone">お電話</label>
-          <input type="radio" id="contact-fax" name="FAX" value="FAX">
+          <input type="radio" id="contact-fax" name="contact" value="FAX">
           <label for="contact-fax">FAX</label>
-          <input type="radio" id="contact-mail" name="メール" value="メール">
+          <input type="radio" id="contact-mail" name="contact" value="メール">
           <label for="contact-mail">メール</label>
         </div>
 
@@ -96,8 +111,7 @@
         </div>
 
         <input id="contact-submit" type="submit" value="送信">
-        <input id="contact-reset" type="reset" value="リセット">
-
+        <input id="contact-reset" type="reset" value="リセット" >
       </form>
     </main>
 
@@ -121,9 +135,6 @@
         </nav>
       </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-    <script type="text/javascript"  src="js/slick.min.js"></script>
     <script type="text/javascript"  src="js/script.js"></script>
   </body>
 </html>
