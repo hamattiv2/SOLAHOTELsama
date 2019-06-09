@@ -17,7 +17,7 @@ body {
   background: #fff;
   z-index: 9999;
   box-sizing: border-box;
-  padding: 0 4rem;
+  padding: 0 6rem;
 }
 
 .page-header h3:hover {
@@ -179,7 +179,7 @@ body {
   width: 90%;
   height: 500px;
   padding: 2rem 2rem;
-  margin: 7rem auto 6.25rem auto;
+  margin: 7rem auto 0 auto;
   list-style: none;
   border: 1px solid #808080;
   background: #fff;
@@ -218,6 +218,14 @@ iframe {
   width: 25px;
 }
 
+.room-info {
+  margin-bottom: 10rem;
+}
+
+.room-info:last-child {
+  margin-bottom: 0;
+}
+
 .room-info h2 {
   color: #696969;
   margin-left: 9rem;
@@ -231,17 +239,13 @@ iframe {
 
 .room img {
   display: flex;
-  width: 55%;
   height: 300px;
   margin-right: 5px;
 }
 
 .room-details {
   color: #696969;
-  width: 45%;
   height: 300px;
-  margin: 0 auto;
-  box-sizing: border-box;
 }
 
 .room-details h3{
@@ -257,9 +261,9 @@ iframe {
 .room-picutre {
   display: flex;
   list-style: none;
-  margin: 0 11rem;
+  color: #808080;
+  margin: 0 11rem 0 11rem;
   padding: 0px;
-  margin-bottom: 100px;
 }
 
 .room-picutre:last-child {
@@ -383,7 +387,8 @@ iframe {
 }
 
 .news-info dl {
-  margin-left: 2rem;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 100px;
 }
 
@@ -397,6 +402,11 @@ iframe {
   height: 200px;
   top: 5rem;
   left: 40rem; 
+}
+
+.anchor {
+  padding-top:100px;
+  margin-top:-100px;
 }
 
 /* company.html 会社情報*/
@@ -470,7 +480,7 @@ iframe {
 
 input[type="label"],
 input[type="radio"] {
-  vertical-align: middle;  
+  vertical-align: bottom;  
 }
 
 .contact-info select {
@@ -615,120 +625,318 @@ span {
 }
 
 /* レスポンシブ */
+/* タブレット対応 */
+@media (max-width: 900px) {
+    /* 全ページ共通 */
+    .page-header {
+      padding: 0 2rem;
+    }
+  
+    .main-nav {
+      display: none;
+    }
+  
+    #resp-menu-open {
+      display: inline-block;
+    }
+  
+    #resp-menu-open {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      cursor: pointer;
+      margin-top: 1.5rem;
+    }
+  
+    #resp-menu-open span {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      width: 84%;
+      height: 16%;
+      margin: -8% 0 0 -42%;
+      background: #808080;
+    }
+  
+    #resp-menu-open span::before,
+    #resp-menu-open span::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      margin: -8% 0 0 -50%;
+      background: #808080;
+    }
+  
+    #resp-menu-open span::before {
+      margin-top: -38%;
+    }
+  
+    #resp-menu-open span::after {
+      margin-top: 19%;
+    }
+    
+    #resp-menu-close {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 90%;
+      cursor: pointer;
+    }
+  
+    #resp-menu-close span::before,
+    #resp-menu-close span::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 90%;
+      left: -10%;
+      width: 84%;
+      height: 16%;
+      margin: -8% 0 0 -42%;
+      background: #808080;
+    }
+    
+    #resp-menu-close span::before {
+      transform: rotate(-45deg);
+    }
+    
+    #resp-menu-close span::after {
+      transform: rotate(45deg);
+    }
+    
+    #resp-nav ul {
+      padding: 0;
+      margin-top: 30%;
+    }
+  
+    #resp-nav li {
+      font-size: 2em;
+      list-style: none;
+      margin: 0 auto 1.5rem auto;
+      text-align: center;
+    }
+  
+    #resp-nav a {
+      color: #808080;
+    }
+    
+    .resp-menu-slide {
+      display: block !important; 
+      right: 0 !important;
+    }
+  
+    .resp-menu-slide::after {
+      position: static;
+    }
+  
+    .main-content h1 {
+      margin-left: 5%;
+    }
 
-@media screen and (max-width: 700px) {
+    .footer-nav {
+      display: block;
+    }
+  
+    .footer-address p {
+      margin: 0;
+      line-height: 1.5rem;
+      font-size: 0.85rem;
+    }
+  
+    .footer-content {
+      display: none;
+    }
+
+    /* index.html ホーム */
+    .fadein {
+      height: 500px;
+    }
+  
+    .fadeout {
+      height: 500px;
+    }
+
+    .news-content {
+      margin-top: 37rem;
+      margin-left: 2rem;
+    }
+
+    /* room.html 部屋紹介*/
+    .room-info {
+      margin-bottom: 7rem;
+    }
+  
+    .room-info h2 {
+      margin-left: 5%;
+    }
+
+    .room {
+      margin-right: 0;
+    }
+
+    .room img {
+      height: 200px;
+    }
+
+    .room-details {
+      height: 200px;
+    }
+
+    .room-details h3 {
+      margin-top: 0;
+      margin-left: 1rem;
+    }
+
+    .room-details p {
+      margin-left: 1rem;
+    }
+
+    .room {
+      margin-left: 5%;
+    }
+
+    .room-picutre {
+      margin-left: 5%;
+    }
+
+    /* access.html アクセス */ 
+    .access-route {
+      margin-left: 5%;
+      margin-bottom: 10%;
+    }
+  
+    .access-route:last-child {
+      margin-left: 5%;
+      margin-bottom: 0;
+    }
+    
+    .access-route h2 {
+      margin-bottom: 0;
+    }
+  
+    .access-route p {
+      line-height: 1.25rem;
+      margin:0 5% 0 0;
+    }
+  
+    .access-details img {
+      width: 90%;
+      height: 100%;
+      margin:0 5% 0 0;
+      box-sizing: border-box;
+    }
+
+    /* fact.html 設備情報 */
+    .fact-info {
+      display: block;
+      margin:0 5% 10% 5%;
+    }
+  
+    .fact-info:last-child {
+      display: block;
+      margin:0 5% 0 5%;
+    }
+  
+    .fact-info p {
+      margin-left: 0;
+      line-height: 1rem;
+    }
+  
+    .fact-info img {
+      position: static;
+      width: 50%;
+    }
+
+    /* neighbor.html 近隣情報 */
+    .neighbor-desc {
+      margin: 0 5% 5% 5%;
+    }
+  
+    .neighbor-info {
+      position: static;
+      display: block;
+      margin: 0 5% 10% 5%;
+    }
+  
+    .neighbor-info:last-child {
+      margin-bottom: 0;
+    }
+  
+    .neighbor-info p {
+      line-height: 1.5rem;
+      margin: 0 5% 0 0;
+    }
+  
+    .neighbor-info img {
+      position: static;
+      width: 50%;
+      margin-top: 5%;
+    } 
+  
+    /* news.html お知らせ */
+    .news-info {
+      position: static;
+      display: block;
+      margin-left: 5%;
+    }
+  
+    .news-info dl {
+      margin-left: 0;
+      margin-bottom: 5%;
+    }
+  
+    .news-info img {
+      position: static;
+    }
+
+    /* company.html 会社情報 */
+    .company-info {
+      margin:0 5% 5% 5%;
+    }
+  
+    .company-info:last-child {
+      margin:0 5% 0% 5%;
+    }
+  
+    .company-info p {
+      line-height: 1.5rem;
+      margin: 0;
+    }  
+
+    /* company.html 会社情報 */
+    .contact-info {
+      margin-left: 5%;
+    }
+
+    /* privacy.html プライバシーポリシー */
+    .privacy-info {
+      margin: 0 5%;
+    }
+  
+    .privacy-info p {
+      margin: 0; 
+    }
+  
+    .privacy-inq p {
+      line-height: 1.5rem;
+    }
+    
+
+  }
+
+
+/* スマホ対応 */
+@media (max-width: 600px) {
 
   /* 全ページ共通 */
-  .page-header {
-    padding: 0 2rem;
-    /* justify-content: flex-start; */
-  }
-
-  .main-nav {
-    display: none;
-  }
-
-  #resp-menu-open {
-    display: inline-block;
-  }
-
-  #resp-menu-open {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    cursor: pointer;
-    margin-top: 1.5rem;
-  }
-
-  #resp-menu-open span {
-    position: absolute;
-    display: block;
-    top: 50%;
-    left: 50%;
-    width: 84%;
-    height: 16%;
-    margin: -8% 0 0 -42%;
-    background: #808080;
-  }
-
-  #resp-menu-open span::before,
-  #resp-menu-open span::after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    margin: -8% 0 0 -50%;
-    background: #808080;
-  }
-
-  #resp-menu-open span::before {
-    margin-top: -38%;
-  }
-
-  #resp-menu-open span::after {
-    margin-top: 19%;
-  }
-  
-  #resp-menu-close {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: 90%;
-    cursor: pointer;
-  }
-
-  #resp-menu-close span::before,
-  #resp-menu-close span::after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 90%;
-    left: -10%;
-    width: 84%;
-    height: 16%;
-    margin: -8% 0 0 -42%;
-    background: #808080;
-  }
-  
-  #resp-menu-close span::before {
-    transform: rotate(-45deg);
-  }
-  
-  #resp-menu-close span::after {
-    transform: rotate(45deg);
-  }
-  
-  #resp-nav ul {
-    padding: 0;
-    margin-top: 30%;
-  }
-
   #resp-nav li {
     font-size: 1.25em;
-    list-style: none;
-    margin: 0 auto 1.5rem auto;
-    text-align: center;
-  }
-
-  #resp-nav a {
-    color: #808080;
-  }
-  
-  .resp-menu-slide {
-    display: block !important; 
-    right: 0 !important;
-  }
-
-  .resp-menu-slide::after {
-    position: static;
-  }
-
-  .main-content h1 {
-    margin-left: 5%;
   }
 
   /* index.html ホーム */
@@ -748,10 +956,10 @@ span {
   .news-content dl {
     margin: 0 auto 1rem auto;
   }
-  
-  /* .news-content dt {
-    margin-left: 0;
-  } */
+
+  .news-content dt {
+    margin: 0;
+  }
 
   .feature-content {
     height: 50%;
@@ -772,9 +980,13 @@ span {
   }
 
   /* room.html 部屋紹介 */
-  .room-info h2 {
-    margin-left: 5%;
+  .room-info {
+    margin-bottom: 4rem;
   }
+
+    .room-info {
+      margin-left: 5%;
+    }
 
   .room {
     margin: 0 5%;
@@ -782,7 +994,6 @@ span {
 
   .room img {
     width: 100%;
-    height: 50%;
   }
 
   .room-details {
@@ -795,10 +1006,11 @@ span {
 
   .room-picutre li:last-child { 
     margin-right: 0;
-  }
+  } 
 
   .room-responsive {
     display: block;
+    color: #808080;
     margin-left: 5%;  
     margin-bottom: 10%;
   }
@@ -811,77 +1023,23 @@ span {
     margin: 0 auto;
   }
 
-  /* access.html アクセス */
-  .access-route {
-    margin-left: 5%;
-    margin-bottom: 10%;
-  }
-
-  .access-route:last-child {
-    margin-left: 5%;
-    margin-bottom: 0;
-  }
-
-  .access-route p {
-    line-height: 1rem;
-    margin:0 5% 0 0;
-  }
-
-  .access-details img {
-    width: 90%;
-    height: 100%;
-    margin:0 5% 0 0;
-    box-sizing: border-box;
-  }
-
   /* fact.html 設備情報 */
   .fact-info {
-    display: block;
-    margin:0 5% 15% 5%;
-  }
-
-  .fact-info:last-child {
-    display: block;
-    margin:0 5% 0 5%;
-  }
-
-
-  .fact-info p {
-    margin-left: 0;
-    line-height: 1rem;
+    margin-bottom: 15%;
   }
 
   .fact-info img {
-    position: static;
     width: 100%;
   }
 
   /* neighbor.html 近隣情報 */
   .neighbor-desc {
-    margin: 0 5% 10% 5%;
-  }
-
-  .neighbor-info {
-    position: static;
-    display: block;
-    margin: 0 5% 10% 5%;
-  }
-
-  .neighbor-info:last-child {
-    margin-bottom: 0;
-  }
-
-  .neighbor-info p {
-    line-height: 1.5rem;
-    margin: 0 5% 0 0;
+    margin-bottom: 10%;
   }
 
   .neighbor-info img {
-    position: static;
     width: 100%;
-    margin-top: 5%;
-  }
-
+  } 
 
   /* news.html お知らせ */
   .news-info {
@@ -901,17 +1059,8 @@ span {
 
   /* company.html 会社情報 */
   .company-info {
-    margin:0 5% 10% 5%;
+    margin-bottom: 10%;
   }
-
-  .company-info:last-child {
-    margin:0 5% 0% 5%;
-  }
-
-  .company-info p {
-    line-height: 1.5rem;
-    margin: 0;
-  }  
 
   /* comtact.html お問合せ */
   .contact-info {
@@ -953,37 +1102,6 @@ span {
 
   #contact-submit, #contact-reset {
     height: 50%;
-  }
-
-  
-
-
-
-  /* privacy.html プライバシーポリシー */
-  .privacy-info {
-    margin: 0 5%;
-  }
-
-  .privacy-info p {
-    margin: 0; 
-  }
-
-  .privacy-inq p {
-    line-height: 1.5rem;
-  }
-
-  .footer-nav {
-    display: block;
-  }
-
-  .footer-address p {
-    margin: 0;
-    line-height: 1.5rem;
-    font-size: 0.85rem;
-  }
-
-  .footer-content {
-    display: none;
   }
 
 }
