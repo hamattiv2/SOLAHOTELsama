@@ -282,8 +282,18 @@ iframe {
 
 .room-responsive {
   display:  none;
-  
 }
+
+.lum-lightbox-inner img {
+  margin-top: 96px;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.lum-gallery-button {
+  top: 55%;
+}
+
 
 /* access.html アクセス */
 .access-route {
@@ -806,13 +816,13 @@ span {
     }
 
     .lum-lightbox-inner img {
-      width: 100%;  
-      /* max-height: 88vh;   */
+      margin-top: 50px;
+      width: 80%;  
     }
 
-    .lum-gallery-button:after {
-      width: 2rem;
-      height: 2rem;
+    
+    .lum-gallery-button {
+      top: 21rem;
     }
 
     /* access.html アクセス */ 
