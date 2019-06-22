@@ -105,34 +105,35 @@ body {
 
 /* index.html ホーム*/
 .slideshow {
-  content:'';
-  display:block;
-  width:100%;
-  height: 100%;
-  padding: 51% 0 0;
+  position: relative;
+  width: 100%;
+  height: 40%;
+  padding: 50% 0 0;
  }
 
 .fadein {
   position: absolute;
-  top: 100px;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 45vw;
+  height: 80%;
   opacity: 1;
   transition: 3s ease-in-out;
 }
 
 .fadeout {
   position: absolute;
-  top: 100px;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 45vw;
+  height: 80%;
   opacity: 0;
   transition: 3s ease-in-out;
 }
 
 .news-content {
+  position: relative;
+  top: 0;
   margin-left: 10rem;
   list-style: none;
 }
@@ -643,13 +644,6 @@ span {
 
 /* レスポンシブ */
 /* タブレット対応 */
-@media (max-width: 1260px) {
-  .room-picutre img {
-    width: 100%;
-  }
-
-}
-
 @media (max-width: 900px) {
     /* 全ページ共通 */
     .page-header {
@@ -760,7 +754,7 @@ span {
     }
   
     .main-content h1 {
-      margin-left: 5%;
+      margin-left: 2rem;
     }
 
     .footer-nav {
@@ -779,27 +773,28 @@ span {
 
     /* index.html ホーム */
     .news-content {
-      margin-top: 10%;
+      margin-top: 5%;
       margin-left: 2rem;
     }
 
     .feature-content {
-      margin-top: 18%;
+      margin-top: 15%;
     }
 
     .map-content {
-      margin-top: 18%;
+      margin-top: 15%;
     }
 
     /* room.html 部屋紹介*/
     .room-info {
+      margin-left: 2rem;
       margin-bottom: 7rem;
     }
-  
-    .room-info h2 {
-      margin-left: 5%;
-    }
 
+    .room-info h2 {
+      margin-left: 0;
+    }
+  
     .room {
       margin-right: 0;
     }
@@ -822,15 +817,15 @@ span {
     }
 
     .room {
-      margin-left: 5%;
+      margin-left: 0;
     }
 
     .room-picutre {
-      margin-left: 5%;
+      margin-left: 0;;
     }
 
     .room-picutre img {
-      width: 100%;
+      width: 9rem;
     }
 
     .lum-lightbox-inner img {
@@ -841,12 +836,11 @@ span {
 
     /* access.html アクセス */ 
     .access-route {
-      margin-left: 5%;
+      margin-left: 2rem;
       margin-bottom: 10%;
     }
   
     .access-route:last-child {
-      margin-left: 5%;
       margin-bottom: 0;
     }
     
@@ -856,25 +850,20 @@ span {
   
     .access-route p {
       line-height: 1.25rem;
-      margin:0 5% 0 0;
+      margin:0 2rem 0 0;
     }
   
     .access-details img {
       width: 90%;
       height: 100%;
-      margin:0 5% 0 0;
+      margin:0 2rem 0 0;
       box-sizing: border-box;
     }
 
     /* fact.html 設備情報 */
     .fact-info {
       display: block;
-      margin:0 5% 10% 5%;
-    }
-  
-    .fact-info:last-child {
-      display: block;
-      margin:0 5% 0 5%;
+      margin-left:2rem;
     }
   
     .fact-info p {
@@ -884,18 +873,23 @@ span {
   
     .fact-info img {
       position: static;
-      width: 50%;
+      width: 20rem;
     }
 
     /* neighbor.html 近隣情報 */
     .neighbor-desc {
-      margin: 0 5% 5% 5%;
+      margin: 0 2rem 5% 0;
+    }
+
+    .neighbor-desc {
+      margin-left: 2rem;
     }
   
     .neighbor-info {
       position: static;
       display: block;
-      margin: 0 5% 10% 5%;
+      margin-left: 2rem;
+      margin-bottom: 5rem;
     }
   
     .neighbor-info:last-child {
@@ -904,12 +898,12 @@ span {
   
     .neighbor-info p {
       line-height: 1.5rem;
-      margin: 0 5% 0 0;
+      margin: 0 2rem 0 0;
     }
   
     .neighbor-info img {
       position: static;
-      width: 50%;
+      width: 20rem;
       margin-top: 5%;
     } 
   
@@ -917,7 +911,7 @@ span {
     .news-info {
       position: static;
       display: block;
-      margin-left: 5%;
+      margin-left: 2rem;
     }
   
     .news-info dl {
@@ -931,11 +925,12 @@ span {
 
     /* company.html 会社情報 */
     .company-info {
-      margin:0 5% 5% 5%;
+      margin-left:2rem;
+      margin-bottom: 5rem;
     }
   
     .company-info:last-child {
-      margin:0 5% 0% 5%;
+      margin:0 2rem 0% 5%;
     }
   
     .company-info p {
@@ -945,7 +940,7 @@ span {
 
     /* company.html 会社情報 */
     .contact-info {
-      margin-left: 5%;
+      margin-left: 2rem;
     }
 
     /* privacy.html プライバシーポリシー */
@@ -971,11 +966,6 @@ span {
   /* 全ページ共通 */
   #resp-nav li {
     font-size: 1.25em;
-  }
-
-  .news-content {
-    margin-top: 10%;
-    margin-left: 2rem;
   }
 
   .news-content dl {
@@ -1009,16 +999,12 @@ span {
     margin-bottom: 4rem;
   }
 
-  .room-info {
-    margin-left: 5%;
-  }
-
   .room {
-    margin: 0 5%;
+    margin: 0;
   }  
 
   .room img {
-    width: 100%;
+    width: 20.6rem;
   }
 
   .room-details {
@@ -1026,17 +1012,24 @@ span {
   }
 
   .room-picutre { 
-    margin: 0 5%;
+    margin-left: 0;
+  }
+
+  .room-picutre li {
+    margin-right: 4px;
   }
 
   .room-picutre li:last-child { 
     margin-right: 0;
-  } 
+  }
+  
+  .room-picutre img {
+    width: 5rem;
+  }
 
   .room-responsive {
     display: block;
     color: #808080;
-    margin-left: 5%;  
     margin-bottom: 10%;
   }
 
@@ -1054,23 +1047,23 @@ span {
   }
 
   .fact-info img {
-    width: 100%;
+    width: 15rem;
   }
 
   /* neighbor.html 近隣情報 */
   .neighbor-desc {
-    margin-bottom: 10%;
+    margin-bottom: 1rem;
   }
 
   .neighbor-info img {
-    width: 100%;
+    width: 15rem;
   } 
 
   /* news.html お知らせ */
   .news-info {
     position: static;
     display: block;
-    margin-left: 5%;
+    margin-left: 0;
   }
 
   .news-info dl {
@@ -1088,9 +1081,6 @@ span {
   }
 
   /* comtact.html お問合せ */
-  .contact-info {
-    margin-left: 5%;
-  }
 
   .contact-info input {
     width: 90% !important;
